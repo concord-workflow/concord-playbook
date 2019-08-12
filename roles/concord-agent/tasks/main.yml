@@ -21,7 +21,7 @@
     image: "library/docker:stable-dind"
     state: started
     pull: true
-    command: "-H tcp://localhost:6666"
+    command: "dockerd -H tcp://127.0.0.1:6666 --bip=10.11.13.1/24"
     network_mode: host
     privileged: yes
     restart_policy: unless-stopped
