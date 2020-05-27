@@ -1,6 +1,0 @@
----
-- name: restart concord_console
-  docker_container:
-    name: console
-    restart: yes
-  when: docker_container_concord_console.changed == false
